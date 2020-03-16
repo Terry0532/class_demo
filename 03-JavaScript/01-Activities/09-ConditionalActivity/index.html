@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        var steak = confirm("Do you eat steak");
+        var age = confirm("Are you over the age of 21?");
+
+        if (steak && age) {
+            alert("Here's a Steak Sandwich.");
+        } else if (steak && age != true) {
+            alert("Here's a Steak Ssandwich.");
+            alert("No sake for you!")
+        } else if (steak != true && age) {
+            alert("Here's a Tofu Stir-Fry!");
+        } else {
+            alert("Here's a Tofu Stir-Fry!");
+            alert("No sake for you!")
+        }
+
+    </script>
+
+</body>
+</html>

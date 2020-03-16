@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var winCount = 0;
+        var loseCount = 0;
+        var tieCount = 0;
+        var winS = "";
+        var loseS = "";
+        var tieS = "";
+        for (let index = 0; index < 10; index++) {
+            var userInput = Number(prompt("select 1:rock, 2:paper, 3:scissors"));
+            var randomNum = Math.floor(Math.random() * 3) + 1;
+            console.log(userInput);
+            console.log(randomNum);
+            if (userInput === randomNum) {
+                alert("tie");
+                tieCount++;
+            } else if (userInput === 1 && randomNum === 2) {
+                alert("u lost");
+                loseCount++;
+            } else if (userInput === 1 && randomNum === 3) {
+                alert("u win");
+                winCount++;
+            } else if (userInput === 2 && randomNum === 1) {
+                alert("u win");
+                winCount++;
+            } else if (userInput === 2 && randomNum === 3) {
+                alert("u lost");
+                loseCount++;
+            } else if (userInput === 3 && randomNum === 1) {
+                alert("u lost");
+                loseCount++;
+            } else if (userInput === 3 && randomNum === 2) {
+                alert("u win");
+                winCount++;
+            } else {
+                alert("error");
+                index--;
+            }
+        }
+        if (winCount > 1) {
+            winS = "s";
+        }
+        if (loseCount > 1) {
+            loseS = "s";
+        }
+        if (tieCount > 1) {
+            tieS = "s";
+        }
+        alert("lost " + loseCount + " time" + loseS + "\nwon " + winCount + " time" + winS + "\ntie " + tieCount + " time" + tieS);
+    </script>
+</body>
+
+</html>
