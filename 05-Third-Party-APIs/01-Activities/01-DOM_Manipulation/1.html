@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic JavaScript Dump</title>
+</head>
+  <body>
+
+    <!-- We created an empty HTML div. Note that there is no content inside. -->
+    <div id="empty-div"></div>
+
+  </body>
+  <script>
+    var emptyDivNode = document.getElementById("empty-div");
+    emptyDivNode.textContent = "Hello Friends!";
+    var fancyDivNode = document.createElement("div");
+    fancyDivNode.setAttribute("class", "fancy");
+    fancyDivNode.textContent = "A pleasure to meet you!";
+    emptyDivNode.appendChild(fancyDivNode);
+  </script>
+</html>
