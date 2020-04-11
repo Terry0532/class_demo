@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+    <button id="search">search</button>
+    <div id="articles"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script>
+        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=20180330&end_date=20190330&q=health&api-key=G5sawparbN2jAJKYyp2dw8Qs3VHxg35u";
+        var articleList = [];
+        var numberArticle = 1;
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (response) {
+            for (i = 0; i < 10; i++) {
+                articleList.push(response.response.docs[i]);
+            }
+        });
+
+        $(".form-control").on("change", function () {
+            numberArticle = Number($(this).val());
+        });
+
+        $("#search").on("click", function () {
+            for (i = 0; i < numberArticle; i++) {
+                $("#articles").append(articleList[i].abstract + "<br/>");
+                $("#articles").append(articleList[i].web_url + "<br/>");
+                $("#articles").append(articleList[i].pub_date + "<br/>");
+                $("#articles").append("<hr>");
+            }
+        });
+    </script>
+</body>
+
+</html>

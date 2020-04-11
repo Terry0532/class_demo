@@ -49,7 +49,12 @@
           url: queryURL,
           method: "GET"
         }).then(function(response) {
-
+          $("#movies-view").empty();
+          $("#movies-view").append(response.Title + "<br />");
+          $("#movies-view").append(response.Rated + "<br />");
+          $("#movies-view").append(response.Year + "<br />");
+          $("#movies-view").append(response.Plot + "<br />");
+          $("#movies-view").append("<img src='" + response.Poster + "' alt='movie poster'>" + "<br />");
           // Creates a div to hold the movie
           // Retrieves the Rating Data
           // Creates an element to have the rating displayed

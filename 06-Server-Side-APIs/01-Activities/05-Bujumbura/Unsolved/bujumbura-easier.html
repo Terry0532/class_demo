@@ -15,7 +15,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     // This is our API key. Add your own API key between the ""
-    var APIKey = "";
+    var APIKey = "6589fea9432de91039df69d6bc3814ba";
 
     // Here we are building the URL we need to query the database
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Bujumbura,Burundi&appid=" + APIKey;
@@ -24,8 +24,12 @@
     $.ajax({
       url: queryURL,
       method: "GET"
-    }).then(function(response) {
-
+    }).then(function (response) {
+      console.log(response);
+      console.log(response.main.temp);
+      var F = (response.main.temp - 273.15) * 1.80 + 32;
+      // $(".temp").text(F);
+      document.querySelector(".temp").innerText = F;
       // Create CODE HERE to Log the queryURL
       // Create CODE HERE to log the resulting object
       // Create CODE HERE to calculate the temperature (converted from Kelvin)
