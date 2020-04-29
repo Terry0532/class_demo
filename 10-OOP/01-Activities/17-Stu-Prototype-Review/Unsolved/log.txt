@@ -1,0 +1,31 @@
+Show: The Office
+
+Genre(s): Comedy
+
+Rating: 8.5
+
+Network: NBC
+
+Summary: <p>Steve Carell stars in <b>The Office</b>, a fresh and funny mockumentary-style glimpse into the daily interactions of the eccentric workers at the Dunder Mifflin paper supply company. Based on the smash-hit British series of the same name and adapted for American Television by Greg Daniels, this fast-paced comedy parodies contemporary American water-cooler culture. Earnest but clueless regional manager Michael Scott believes himself to be an exceptional boss and mentor, but actually receives more eye-rolls than respect from his oddball staff.</p>
+
+------------------------------------------------------------NameWill Smith
+
+Birthday1971-01-01
+
+GenderMaleName: Will Smith
+
+Birthday: 1971-01-01
+
+Gender: Male
+
+------------------------------------------------------------Show: black-ish
+
+Genre(s): Comedy, Family
+
+Rating: 6.9
+
+Network: ABC
+
+Summary: <p>Andre 'Dre' Johnson has a great job, a beautiful wife, Rainbow, four kids, and a colonial home in the 'burbs. But has success brought too much assimilation for this black family? With a little help from his dad, Dre sets out to establish a sense of cultural identity for his family that honors their past while embracing the future.</p>
+
+------------------------------------------------------------
