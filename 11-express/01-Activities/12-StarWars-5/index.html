@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+            constructor(name, id, email) {
+                this.name = name;
+                this.id = id;
+                this.email = email;
+            }
+
+            getName() {
+                return this.name;
+            }
+
+            getId() {
+                return this.id;
+            }
+
+            getEmail() {
+                return this.email;
+            }
+
+            getRole() {
+                return "Employee";
+            }
+        }
+
+        class Engineer extends Employee {
+            constructor(name, id, email, github) {
+                super(name, id, email);
+                this.github = github;
+            }
+
+            getGithub() {
+                return this.github;
+            }
+
+            getRole() {
+                return "Engineer";
+            }
+        }
+
+        const engineer = new Engineer("1", 2, "3", "4");
+        console.log(engineer);
+        const list = [];
+        list.push(engineer);
+        console.log(list);
+    </script>
+</body>
+
+</html>

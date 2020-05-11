@@ -28,15 +28,17 @@ var characters = [{
 
 // Routes
 // ===========================================================
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
-app.get("/:character", function(req, res) {
+app.get("/:character", function (req, res) {
   var chosen = req.params.character;
 
   // What does this log?
   console.log(chosen);
+
+  res.json(chosen);
 
   res.end();
 });
@@ -44,6 +46,6 @@ app.get("/:character", function(req, res) {
 
 // Listener
 // ===========================================================
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
 });
